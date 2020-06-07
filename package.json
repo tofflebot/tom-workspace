@@ -1,0 +1,21 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch-pug": "pug -w ./src/pug/*.pug -o ./dist -P",
+    "watch-sass": "sass --watch ./src/scss:./dist/styles",
+    "minify-sass": "sass ./src/scss:./dist/styles --style=compressed",
+    "postcss": "postcss dist/styles/main.css -r --use=autoprefixer --nomap",
+    "pages-push": "node gh-pages.js"
+  },
+  "keywords": [],
+  "author": "Tom Holt",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "postcss-cli": "^7.1.1"
+  }
+}
